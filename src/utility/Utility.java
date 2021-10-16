@@ -65,6 +65,5 @@ public class Utility {
             }
         }
         System.out.println("Failed to delete data");
-        return;
     }
 }
