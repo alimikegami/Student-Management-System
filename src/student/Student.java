@@ -21,6 +21,10 @@ public class Student {
         
         System.out.println("Student record has been created!");
     }
+
+    public String getNIM() {
+        return this.NIM;
+    }
     
     public void getStudentData(){
         System.out.println("NIM: " + this.NIM);
