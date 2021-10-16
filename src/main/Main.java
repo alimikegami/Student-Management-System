@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import student.Student;
-import utility.utility;
+import utility.Utility;
 
 /**
  *
@@ -38,7 +38,7 @@ public class Main {
                     System.out.println("=============================");
                     System.out.println("===== Show Student Data =====");
                     System.out.println("=============================");
-                    utility.showStudent(students);
+                    Utility.showStudent(students);
                     
                 break;
                 case 2:
@@ -52,7 +52,7 @@ public class Main {
                     System.out.println("=============================");
                     System.out.println("===== Add Student Data ======");
                     System.out.println("=============================");
-                    utility.addStudent(students);
+                    Utility.addStudent(students);
                 break;
                 case 4:
                     System.out.println("=============================");
