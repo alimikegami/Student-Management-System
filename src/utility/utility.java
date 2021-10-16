@@ -13,7 +13,7 @@ import student.Student;
  *
  * @author alimi
  */
-public class utility {
+public class Utility {
     
     public static void addStudent(ArrayList<Student> students){
         String NIM, name, major, faculty, university;
