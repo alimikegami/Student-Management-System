@@ -58,7 +58,7 @@ public class Main {
                     System.out.println("=============================");
                     System.out.println("==== Update Student Data ====");
                     System.out.println("=============================");
-//                    Operasi.updateData();
+                    Utility.UpdateDataMahasiswa(students);
                 break;
                 case 5:
                     System.out.println("=============================");
