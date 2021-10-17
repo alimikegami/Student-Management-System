@@ -43,4 +43,35 @@ public class Utility {
              System.out.println("--------------------------------");
          }
     }
+    
+    public static void searchStudent(ArrayList<Student> students){
+        if(students.size() == 0){
+            System.out.println("Student List is Empty");
+        }else{
+            Scanner in = new Scanner(System.in);
+            boolean finded = false;
+            String nim, kd;
+            int index = -1;
+            
+            System.out.print("Silahkan masukan nim mahasiswa yang ingin dicari :");
+            nim = in.nextLine();
+            
+            for (int i = 0; i < students.size(); i++) {
+                kd = students.get(i).getStudentNim();
+                if(kd.compareTo(nim)==0){
+                    index = i;
+                    finded = true;
+                }
+            }
+            
+            if(finded == true){
+                System.out.println("Data dengan nim "+nim+" tersedia. Berikut ini adalah detailnya");
+                students.get(index).getStudentData();
+            }else{
+                System.out.println("Data yang dicari tidak ada");
+            }
+            
+        }
+        
+    }
 }

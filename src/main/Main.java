@@ -30,7 +30,7 @@ public class Main {
             System.out.println("3.\tAdd Student Data");
             System.out.println("4.\tUpdate Student Data");
             System.out.println("5.\tDelete Student Data");
-            
+            System.out.println("6.\tExit");
             System.out.print("Select action: ");
             pilihan = inputUser.nextInt();
             switch (pilihan) {
@@ -45,7 +45,7 @@ public class Main {
                     System.out.println("=============================");
                     System.out.println("==== Search Student Data ====");
                     System.out.println("=============================");
-                    
+                    Utility.searchStudent(students);
                    
                 break;
                 case 3:

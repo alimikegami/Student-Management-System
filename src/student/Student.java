@@ -29,4 +29,8 @@ public class Student {
         System.out.println("Faculty: " + this.faculty);
         System.out.println("University: " + this.university);
     }
+    
+    public String getStudentNim(){
+        return NIM;
+    }
 }
