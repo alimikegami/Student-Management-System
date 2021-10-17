@@ -14,11 +14,11 @@ import student.Student;
  * @author alimi
  */
 public class Utility {
-    
+
     public static void addStudent(ArrayList<Student> students){
         String NIM, name, major, faculty, university;
         Scanner userInput = new Scanner(System.in);
-        
+
         System.out.print("Insert NIM: ");
         NIM = userInput.nextLine();
         System.out.print("Insert Name: ");
@@ -31,17 +31,40 @@ public class Utility {
         university = userInput.nextLine();
         students.add(new Student(NIM, name, major, faculty, university));
     }
-    
+
     public static void showStudent(ArrayList<Student> students){
-         if (students.size() == 0) {
-             System.out.println("No student records found...");
-             return;
-         }
-         
-         for (int i = 0; i < students.size(); i++) {
+        if (students.size() == 0) {
+            System.out.println("No student records found...");
+            return;
+        }
+
+        for (int i = 0; i < students.size(); i++) {
             students.get(i).getStudentData();
-             System.out.println("--------------------------------");
-         }
+            System.out.println("--------------------------------");
+        }
+    }
+
+    public static void deleteStudent(ArrayList<Student> students) {
+        // memeriksa ukuran array
+        if (students.size() == 0) {
+            System.out.println("No student records found");
+            return;
+        }
+
+        // menerima user input
+        Scanner userInput = new Scanner(System.in);
+        System.out.print("Enter the NIM of the student to be deleted: ");
+        String NIM = userInput.nextLine();
+
+        // menghapus elemen sesuai input user
+        for (int i = 0; i < students.size(); i++) {
+            if (NIM.equals(students.get(i).getStudentNim())) {
+                students.remove(i);
+                System.out.println("Successfully delete data with nim " + NIM);
+                return;
+            }
+        }
+        System.out.println("Failed to delete data");
     }
     
     public static void searchStudent(ArrayList<Student> students){

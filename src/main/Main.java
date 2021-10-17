@@ -64,7 +64,7 @@ public class Main {
                     System.out.println("=============================");
                     System.out.println("==== Delete Student Data ====");
                     System.out.println("=============================");
-//                    Operasi.updateData();
+                    Utility.deleteStudent(students);
                 break;
                 case 6:
                     System.out.println("Program exited..");
